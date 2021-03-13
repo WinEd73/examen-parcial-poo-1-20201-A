@@ -2,30 +2,28 @@ package com.oop.exam.model;
 
 public class User {
 
-    public String userName;
-    public String correo;
+    public String username;
+    public String email;
 
-    public User(String userName, String correo) {
-        this.userName = userName;
-        this.correo = correo;
+    public User(String username, String email) {
+        this.username = username;
+        this.email = email;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
-
-
 
 }

@@ -1,44 +1,23 @@
 package com.oop.exam.model;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Movie {
 
     private String title;
-    private String year;
-    private ArrayList<Actors> actors;
+    private int year;
+    private List<String> actors;
     private String director;
-    private ArrayList<Platform> platforms;
+    private List<Platform> platforms;
     private String Synopsis;
-    private ArrayList<Review> reviews;
+    private List<Review> reviews;
 
-
-
-    public String getSynopsis() {
-        return Synopsis;
-    }
-
-    public void setSynopsis(String synopsis) {
-        Synopsis = synopsis;
-    }
-
-    public ArrayList<Review> getReviews() {
-        return reviews;
-    }
-
-    public class Actors{
-
-    }
-    public void setReviews(ArrayList<Review> reviews) {
-        this.reviews = reviews;
-    }
-
-    public ArrayList<Platform> getPlatforms() {
-        return platforms;
-    }
-
-    public void setPlatforms(ArrayList<Platform> platforms) {
-        this.platforms = platforms;
+    public Movie(String title, int year, String director) {
+        this.title = title;
+        this.year = year;
+        this.director = director;
+        reviews = new LinkedList<>();
     }
 
     public String getTitle() {
@@ -49,14 +28,21 @@ public class Movie {
         this.title = title;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         this.year = year;
     }
 
+    public List<String> getActors() {
+        return actors;
+    }
+
+    public void setActors(List<String> actors) {
+        this.actors = actors;
+    }
 
     public String getDirector() {
         return director;
@@ -66,25 +52,31 @@ public class Movie {
         this.director = director;
     }
 
-    public ArrayList<actors> getActors() {
-        return actors;
+    public List<Platform> getPlatforms() {
+        return platforms;
     }
 
-    public void setActors(ArrayList<actors> actors) {
-        this.actors = actors;
+    public void setPlatforms(List<Platform> platforms) {
+        this.platforms = platforms;
     }
 
-    public void addReview(String name, MovieScore moviescore, String review){
-        review.add(review);
+    public String getSynopsis() {
+        return Synopsis;
     }
 
-    public void reserveRoom(Review review, String title, String year, String user) {
-        Reservation reservation = new Reservation();
+    public void setSynopsis(String synopsis) {
+        Synopsis = synopsis;
+    }
 
-        Review.setReview(review);
-        Review.setUser(user);
-        Review.setScore(score);
+    public List<Review> getReviews() {
+        return reviews;
+    }
 
-        reviews.add(reviews);
+    public void setReviews(List<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public void addReview(Review review){
+        reviews.add(review);
     }
 }

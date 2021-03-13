@@ -2,15 +2,18 @@ package com.oop.exam.model;
 
 public class Review {
 
-    public String score;
-    public String review;
-    public String user;
+    private MovieScore score;
+    private String review;
+    private User user;
 
+    public MovieScore getScore() {
+        return score;
+    }
 
-    public void review(String name, MovieScore moviescore, String review){
-        this.user = user;
-        this.review = review;
+    public Review(User user, MovieScore score, String review) {
         this.score = score;
+        this.review = review;
+        this.user = user;
     }
 
     public String getReview() {
@@ -21,24 +24,17 @@ public class Review {
         this.review = review;
     }
 
-
-    public String getUser() {
-        return user;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
+    public void setScore(MovieScore score) {
         this.score = score;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
 
 }

@@ -1,7 +1,7 @@
 package com.oop.exam.service;
 
 import com.oop.exam.model.Movie;
-import com.oop.exam.model.Review;
+
 
 import java.util.LinkedList;
 
@@ -9,11 +9,15 @@ public class MovieManager {
 
     private LinkedList<Movie> movies;
 
-    public MovieManager(LinkedList<Movie> movies) {
-        this.movies = movies;
-    }
-    public String findMovie(Movie movie){
-        return  movie.getTitle();
+
+    public Movie findMovie(String title){
+
+        for(Movie movie: movies){
+            if(movie.getTitle().equals(title)){
+                return movie;
+            }
+        }
+        return  null;
     }
 
     public MovieManager() {
@@ -24,7 +28,7 @@ public class MovieManager {
         return movies;
     }
 
-    public void addMovie(Movie movie){
-        movie.add(movie);
+    public void addMovie(Movie lordOfTheRings1){
+        movies.add(lordOfTheRings1);
     }
 }
